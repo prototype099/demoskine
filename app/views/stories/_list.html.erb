@@ -1,0 +1,23 @@
+<table class="table">
+  <tr>
+    <th>Project</th>
+    <th>Content</th>
+    <th>Tracker</th>
+    <th>Points</th>
+    <th>Requester</th>
+    <th>Owner</th>
+    <th>Status</th>
+  </tr>
+
+<% @stories.each do |story| %>
+  <tr>
+    <td><%= story.project_id %></td>
+    <td><%= story.content %></td>
+    <td><%= story.tracker_id %></td>
+    <td><%= story.points %></td>
+    <td><%= story.requester_id %></td>
+    <td><%= story.owner_id %></td>
+    <td><%= story.status %></td>
+  </tr>
+<% end %>
+</table>

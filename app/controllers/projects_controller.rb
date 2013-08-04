@@ -18,6 +18,10 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
 
+    @story = Story.new({:project_id => @project.id})
+    @stories = Story.list_of(params[:id])
+
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @project }

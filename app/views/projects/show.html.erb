@@ -1,35 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <%= render :partial => 'stories/form' %>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
-
-<p>
-  <b>Owner:</b>
-  <%= @project.owner_id %>
-</p>
-
-<p>
-  <b>Access token:</b>
-  <%= @project.access_token %>
-</p>
-
-<p>
-  <b>Secret:</b>
-  <%= @project.secret %>
-</p>
-
-<p>
-  <b>Archive:</b>
-  <%= @project.archive %>
-</p>
+<div>
+  <h2>Stories</h2>
+  <%= render :partial => 'stories/list' %>
+</div>
 
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
