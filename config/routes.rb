@@ -1,5 +1,15 @@
 Demoskine::Application.routes.draw do
   
+
+  devise_for :users, :controller => {
+    :sessions => "users/sessions",
+    :registrations => "users/registrations"
+  }
+  # for devise users
+  # devise_scope :user do 
+  #   get "user/settings" => "users/registrations#settings"
+  # end
+
   get "home/index"
 
   # The priority is based upon order of creation:
