@@ -1,6 +1,9 @@
 Demoskine::Application.routes.draw do
   
 
+  resources :projects
+
+
   devise_for :users, :controller => {
     :sessions => "users/sessions",
     :registrations => "users/registrations"

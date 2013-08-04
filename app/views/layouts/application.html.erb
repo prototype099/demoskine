@@ -9,6 +9,10 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+  <% logger.debug "current user is #{current_user.inspect}" %>
+<% end %>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
