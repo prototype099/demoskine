@@ -1,0 +1,3 @@
+# Rails project template
+
+
